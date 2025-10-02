@@ -23,7 +23,7 @@ while True: # Створюємо нескінченний цикл
         print("You did not guess the number.") # Якщо вгадане число не дорівнює випадковому числу, виводимо повідомлення і повертаємося до початку циклу
 #---------------------------------------------------------------------------------
 
-#Task 2 The birthday greeting program.
+#Task 2. The birthday greeting program.
 while True: #Створюємо нескінченний цикл
     name = input("What is your name? ") #Запитуємо ім'я
     age = input("How old are you? ") #Запитуємо вік
@@ -35,7 +35,7 @@ while True: #Створюємо нескінченний цикл
         print("Please enter a valid number.") #Виводимо повідомлення якщо введено не число
         continue #Перезапускаємо цикл   
 #------------------------------------------------------------------------------------
-#Task 3 Task 3 Words combination
+#Task 3. Words combination
 import random  # Імпортуємо модуль для роботи з випадковістю
 
 word = input("Введіть слово: ") # Запитуємо слово від користувача
