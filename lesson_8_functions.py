@@ -12,7 +12,6 @@ favorite_movie("Pirates of the Caribbean")
 # Then create a dictionary from those two, with ‘name’ as a key and ‘capital’ as a parameter.
 # Make the function print out the values of the dictionary to make sure that it works as intended.
 
-
 def make_country(name, capital):
     country = {'name': name, 'capital': capital}
     return country
@@ -21,7 +20,6 @@ print(make_country('Ukraine', 'Kyiv'))
 # ----------------------------------------------------------------------------------------------------------------
 
 # Task 3 A simple calculator.
-
 # Create a function called make_operation, 
 # which takes in a simple arithmetic operator as a first parameter 
 # (to keep things simple let it only be '+', '-' or '*') 
@@ -31,7 +29,6 @@ print(make_country('Ukraine', 'Kyiv'))
 # the call make_operation('+', 7, 7, 2) should return 16
 # the call make_operation('-', 5, 5, -10, -20) should return 30
 # the call make_operation('*', 7, 6) should return 42  
-
 
 def make_operation(operator, *args):   # *args - довільна кількість аргументів
     if operator == '+':                # якщо оператор +
@@ -48,8 +45,6 @@ def make_operation(operator, *args):   # *args - довільна кількіс
     
 print(make_operation('+', 7, 7, 2))
 print(make_operation('-', 5, 5, -10, -20))
-
-
 print(make_operation('*', 7, 6, 9))
 print(make_operation('/', 7, 68, 2))
 
