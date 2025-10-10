@@ -18,7 +18,7 @@ def make_country(name, capital):
     return country
 
 print(make_country('Ukraine', 'Kyiv'))
-# ----------------------------------------------------------------------------------------------------------------)
+# ----------------------------------------------------------------------------------------------------------------
 
 # Task 3 A simple calculator.
 
@@ -48,6 +48,10 @@ def make_operation(operator, *args):   # *args - довільна кількіс
     
 print(make_operation('+', 7, 7, 2))
 print(make_operation('-', 5, 5, -10, -20))
+
+
 print(make_operation('*', 7, 6, 9))
 print(make_operation('/', 7, 68, 2))
+
+
 
