@@ -39,7 +39,7 @@ def make_operation(operator, *args):   # *args - довільна кількіс
     elif operator == '-':              # якщо оператор -
         return args[0] - sum(args[1:]) # повертаємо різницю першого аргументу і суми решти аргументів
     elif operator == '*':              # якщо оператор *
-        result = 1
+        result = 1                     # результат = 1
         for num in args:               # для кожного аргументу (ітеруємо)
             result *= num              # множимо result на аргумент
         return result                  # повертаємо добуток всіх аргументів
