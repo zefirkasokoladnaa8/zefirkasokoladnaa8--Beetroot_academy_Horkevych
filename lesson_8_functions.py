@@ -33,19 +33,21 @@ print(make_country('Ukraine', 'Kyiv'))
 # the call make_operation('*', 7, 6) should return 42  
 
 
-def make_operation(operator, *args): # *args - довільна кількість аргументів
-    if operator == '+':              # якщо оператор +
-        return sum(args)             # повертаємо суму аргументів
-    elif operator == '-':            # якщо оператор -
+def make_operation(operator, *args):   # *args - довільна кількість аргументів
+    if operator == '+':                # якщо оператор +
+        return sum(args)               # повертаємо суму аргументів
+    elif operator == '-':              # якщо оператор -
         return args[0] - sum(args[1:]) # повертаємо різницю першого аргументу і суми решти аргументів
-    elif operator == '*':            # якщо оператор *
-        return args[0] * args[1]     # повертаємо добуток першого і другого аргументу
+    elif operator == '*':              # якщо оператор *
+        result = 1
+        for num in args:               # для кожного аргументу (ітеруємо)
+            result *= num              # множимо result на аргумент
+        return result                  # повертаємо добуток всіх аргументів
     else:
-        return "Invalid operator"     # якщо інший опреатор повертаємо повідомлення про помилку
+        return "Invalid operator"      # якщо інший опреатор повертаємо повідомлення про помилку
     
 print(make_operation('+', 7, 7, 2))
 print(make_operation('-', 5, 5, -10, -20))
-print(make_operation('*', 7, 6))
-print(make_operation('/', 7, 6))
-
+print(make_operation('*', 7, 6, 9))
+print(make_operation('/', 7, 68, 2))
 
