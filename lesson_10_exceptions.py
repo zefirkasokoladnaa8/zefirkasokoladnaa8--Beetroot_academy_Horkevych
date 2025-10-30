@@ -12,7 +12,7 @@ def catch_error():
     try:
         oops()
     except IndexError as e:
-        print(print('Caught an IndexError:', e))
+        print('Caught an IndexError:', e)
 
 catch_error()
 
