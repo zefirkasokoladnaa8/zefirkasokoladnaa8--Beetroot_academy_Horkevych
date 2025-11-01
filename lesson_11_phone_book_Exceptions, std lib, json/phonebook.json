@@ -1,0 +1,24 @@
+{
+    "contacts": [
+        {
+            "phone_number": "10334422775",
+            "name": "Donald",
+            "city": "Washington"
+        },
+        {
+            "phone_number": "0501122334",
+            "name": "Alla",
+            "city": "Kyiv"
+        },
+        {
+            "phone_number": "33",
+            "name": "& \"C:/Program Files/Python313/python.exe\" \"c:/Users/anf_a/OneDrive/Рабочий стол/phone_book/list_module.py\"",
+            "city": "Dubai"
+        },
+        {
+            "phone_number": "0962233554",
+            "name": "Omar",
+            "city": "Bagdad"
+        }
+    ]
+}
