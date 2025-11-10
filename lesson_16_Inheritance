@@ -1,0 +1,59 @@
+# Task 1
+
+# School
+
+# Make a class structure in python representing people at school.
+# Make a base class called Person, a class called Student,
+# and another one called Teacher. Try to find as many methods 
+# and attributes as you can which belong to different classes, 
+# and keep in mind which are common and which are not. 
+# For example, the name should be a Person attribute, 
+# while salary should only be available to the teacher. 
+
+
+# Базовий клас для всіх людей
+class Person:
+    def __init__(self, name, age):
+        # Ініціалізація загальних атрибутів для всіх людей
+        self.name = name
+        self.age = age
+    
+    def __str__(self):
+        # Строкове представлення об'єкта
+        return f"{self.name}, {self.age}"
+
+# Клас студента, який наслідує від Person
+class Student(Person):
+    def __init__(self, name, age, student_id):
+        # Виклик конструктора батьківського класу
+        super().__init__(name, age)
+        # Додатковий атрибут, специфічний для студента
+        self.student_id = student_id
+    
+    def __str__(self):
+        # Спеціалізоване строкове представлення для студента
+        return f"Student: {self.name}, {self.age}, ID: {self.student_id}"
+
+# Клас вчителя, який наслідує від Person
+class Teacher(Person):
+    def __init__(self, name, age, salary):
+        # Виклик конструктора батьківського класу
+        super().__init__(name, age)
+        # Додатковий атрибут, специфічний для вчителя
+        self.salary = salary
+    
+    def __str__(self):
+        # Спеціалізоване строкове представлення для вчителя
+        return f"Teacher: {self.name}, {self.age}, Salary: {self.salary}"
+
+# Створення об'єктів різних класів
+person = Person("Anna", 30)                    # Об'єкт базового класу
+student = Student("Ivan", 20, "12345")         # Об'єкт студента
+teacher = Teacher("Alex", 40, 50000)            # Об'єкт вчителя
+
+# Вивід інформації про створені об'єкти
+print(person)    # Викликає __str__ для Person
+print(student)   # Викликає __str__ для Student  
+print(teacher)   # Викликає __str__ для Teacher
+
+# -------------------------------------------------------------------------------------------------------------------------------------------
