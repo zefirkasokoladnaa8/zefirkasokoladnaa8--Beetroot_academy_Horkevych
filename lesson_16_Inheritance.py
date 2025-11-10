@@ -192,3 +192,30 @@ print("Після знижки:", s.get_all_products())
 
 s.set_discount('Food', 20, 'type')  # 20% знижка на всі продукти типу Food
 print("Після знижки за типом:", s.get_all_products())
+
+#  ------------------------------------------------------------------------------------------------------------------------------------------
+# Task 4 Custom exception
+
+class CustomException(Exception):
+    def __init__(self, msg):
+        # Викликаємо конструктор батьківського класу Exception
+        super().__init__(msg)
+        
+        # Відкриваємо файл для дозапису з кодуванням utf-8
+        with open('logs.txt', 'a', encoding='utf-8') as f:
+            # Імпортуємо datetime для отримання поточної дати та часу
+            from datetime import datetime
+            # Записуємо повідомлення про помилку з timestamp у файл
+            f.write(f"[{datetime.now()}] {msg}\n")
+
+# Тестування класу CustomException
+try:
+    # Генеруємо власний виняток з тестовим повідомленням
+    raise CustomException("Test error message")
+except CustomException:
+    # Перехоплюємо виняток, щоб програма не завершилася аварійно
+    pass
+
+
+
+
